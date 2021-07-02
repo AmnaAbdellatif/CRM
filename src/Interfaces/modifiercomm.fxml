@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.ModifiercommController">
+   <children>
+      <Text layoutX="231.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modification d'un commercial" textAlignment="CENTER" underline="true" wrappingWidth="405.13671875">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="35.0" fitWidth="43.0" layoutX="636.0" layoutY="18.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/modifier.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="41.0" layoutY="91.0" prefHeight="489.0" prefWidth="799.0" style="-fx-border-color: #4682B4; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="modifier responsable">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="416.0" prefWidth="602.0">
+                     <children>
+                        <Text layoutX="13.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="modifier responsable" wrappingWidth="151.00001350045204">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="14.0" />
+                           </font></Text>
+                        <Button fx:id="charger1" layoutX="14.0" layoutY="129.0" mnemonicParsing="false" onAction="#handleupdateresButtonAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Enregistrer" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="actualiser" layoutX="126.0" layoutY="129.0" mnemonicParsing="false" onAction="#handleactualiserresAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Actualiser" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="comborespeq" layoutX="384.0" layoutY="44.0" onAction="#comborespeqonaction" prefWidth="150.0" promptText="Choisir une equipe" />
+                        <Label layoutX="262.0" layoutY="46.0" prefHeight="17.0" prefWidth="56.0" text="Equipe">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtnomresp" layoutX="14.0" layoutY="71.0" />
+                        <ListView fx:id="listresp" layoutX="264.0" layoutY="96.0" prefHeight="200.0" prefWidth="274.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="modifier membre equipe">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="883.0">
+                     <children>
+                        <ComboBox fx:id="comboequipe" layoutX="226.0" layoutY="28.0" onAction="#ComboboxonAction" prefHeight="25.0" prefWidth="181.0" promptText="Selectionner une equipe" />
+                        <Text layoutX="126.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipe" textAlignment="CENTER" wrappingWidth="90.00001350045204">
+                           <font>
+                              <Font name="Angsana New Bold Italic" size="21.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tablevcommerc" editable="true" layoutX="75.0" layoutY="163.0" prefHeight="200.0" prefWidth="511.0">
+                           <columns>
+                              <TableColumn fx:id="colonnenom" prefWidth="160.0" text="Nom commercial" />
+                              <TableColumn fx:id="colonneprencommerc" prefWidth="173.0" text="Prenom commercial" />
+                              <TableColumn fx:id="colonnefct" prefWidth="175.0" text="Fonction commercial" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="txtnom" layoutX="126.0" layoutY="120.0" prefHeight="25.0" prefWidth="154.0" />
+                        <TextField fx:id="txtprenom" layoutX="386.0" layoutY="120.0" prefHeight="25.0" prefWidth="127.0" />
+                        <Text layoutX="75.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom " wrappingWidth="71.0869140625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="Enregistrer" layoutX="451.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleenregistrercommButtonAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Enregistrer" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="actualiser1" layoutX="556.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleactualisercommButtonAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Actualiser" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="295.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom " wrappingWidth="71.0869140625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="541.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fonction" wrappingWidth="71.0869140625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtfonction" layoutX="621.0" layoutY="120.0" prefHeight="25.0" prefWidth="127.0" />
+                        <Label layoutX="513.0" layoutY="32.0" prefHeight="17.0" prefWidth="115.0" text="Type Activité:">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtact" layoutX="641.0" layoutY="31.0" prefHeight="25.0" prefWidth="146.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Text disable="true" layoutX="231.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier l'affectation d'un commercial" textAlignment="CENTER" wrappingWidth="339.1367179006338">
+         <font>
+            <Font name="Agency FB Bold" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

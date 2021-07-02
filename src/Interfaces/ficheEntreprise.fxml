@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="imprimepage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.FicheEntrepriseController">
+   <children>
+      <Label layoutX="224.0" layoutY="14.0" text="fiche Entreprise" underline="true">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelraison" layoutX="14.0" layoutY="142.0" prefHeight="33.0" prefWidth="125.0" text="Raison Sociale">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtraison1" disable="true" editable="false" layoutX="155.0" layoutY="146.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label fx:id="labelequipe" layoutX="16.0" layoutY="208.0" prefHeight="33.0" prefWidth="113.0" text="Equipe" textFill="#6b83a4">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtequipe" disable="true" editable="false" layoutX="155.0" layoutY="212.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label fx:id="labeltype" layoutX="10.0" layoutY="282.0" prefHeight="33.0" prefWidth="113.0" text="Type client">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txttypeclient" disable="true" editable="false" layoutX="155.0" layoutY="286.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label fx:id="labeldate" layoutX="14.0" layoutY="91.0" prefHeight="33.0" prefWidth="58.0" text="Date :">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtdate1" layoutX="155.0" layoutY="95.0" prefHeight="25.0" prefWidth="171.0" />
+      <Button fx:id="btnimprimer1" layoutX="526.0" layoutY="665.0" mnemonicParsing="false" onAction="#btnimprimerAction" style="-fx-background-color: #6b83a4;" text="Enregistrer" textFill="#110c0c" />
+      <Button fx:id="btnsave1" layoutX="440.0" layoutY="665.0" mnemonicParsing="false" onAction="#btnsaveAction" style="-fx-background-color: #6b83a4;" text="sauvegarder" textFill="#110c0c" />
+      <Label fx:id="labelcommerciaux" layoutX="10.0" layoutY="404.0" prefHeight="33.0" prefWidth="171.0" text="Commerciaux chargés:">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelresp" layoutX="10.0" layoutY="343.0" prefHeight="33.0" prefWidth="113.0" text="Responsable">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtresp" disable="true" editable="false" layoutX="155.0" layoutY="347.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label fx:id="labelnomcomm" layoutX="53.0" layoutY="477.0" prefHeight="17.0" prefWidth="105.0" text="Nom Commercial">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelprenomcomm" layoutX="224.0" layoutY="477.0" prefHeight="17.0" prefWidth="113.0" text="Prenom Commercial">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelnumordre" layoutX="416.0" layoutY="477.0" prefHeight="17.0" prefWidth="105.0" text="N°ordre">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtnomcomm1" layoutX="27.0" layoutY="494.0" prefHeight="163.0" prefWidth="165.0" />
+      <TextArea fx:id="txtprenomcomm1" layoutX="192.0" layoutY="494.0" prefHeight="163.0" prefWidth="171.0" />
+      <TextArea fx:id="txtnumordre1" layoutX="362.0" layoutY="494.0" prefHeight="163.0" prefWidth="180.0" />
+   </children>
+</AnchorPane>

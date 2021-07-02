@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 mai 2020 00:26:42 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.EquipeCommerciale" table="equipe_commerciale" catalog="crm" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nomEquipe" type="string">
+            <column name="nomEquipe" length="30" not-null="true" />
+        </property>
+        <property name="typeActivEquipe" type="string">
+            <column name="typeActiv_Equipe" length="50" not-null="true" />
+        </property>
+        <property name="responsableEquipe" type="string">
+            <column name="responsable_equipe" length="50" not-null="true" />
+        </property>
+        <property name="codeUnique" type="string">
+            <column name="code_unique" length="20" not-null="true" />
+        </property>
+        <property name="nom" type="string">
+            <column name="nom" length="20" not-null="true" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="prenom" length="20" not-null="true" />
+        </property>
+        <property name="fonction" type="string">
+            <column name="fonction" length="20" not-null="true" />
+        </property>
+        <property name="salaireDeBase" type="int">
+            <column name="`salaire de base`" not-null="true" />
+        </property>
+        <property name="tauxCommis" type="int">
+            <column name="taux_commis" not-null="true" />
+        </property>
+        <property name="numOrdre" type="string">
+            <column name="num_ordre" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

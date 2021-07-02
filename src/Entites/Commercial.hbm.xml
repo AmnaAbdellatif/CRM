@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 mai 2020 00:26:42 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.Commercial" table="commercial" catalog="crm" optimistic-lock="version">
+        <id name="codeUnique" type="string">
+            <column name="code_unique" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="nom" type="string">
+            <column name="nom" length="20" not-null="true" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="prenom" length="20" not-null="true" />
+        </property>
+        <property name="salaireBase" type="int">
+            <column name="salaire_base" not-null="true" />
+        </property>
+        <property name="fonction" type="string">
+            <column name="fonction" length="20" not-null="true" />
+        </property>
+        <property name="numOrdre" type="int">
+            <column name="num_ordre" not-null="true" />
+        </property>
+        <property name="tauxCommiss" type="int">
+            <column name="taux_commiss" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 mai 2020 00:26:42 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.Historique" table="historique" catalog="crm" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="raisonSocial" type="string">
+            <column name="raisonSocial" length="50" not-null="true" />
+        </property>
+        <property name="idclient" type="string">
+            <column name="IDClient" length="30" not-null="true" />
+        </property>
+        <property name="typeClient" type="string">
+            <column name="typeClient" length="50" not-null="true" />
+        </property>
+        <property name="nomEquipe" type="string">
+            <column name="nomEquipe" length="30" not-null="true" />
+        </property>
+        <property name="nomComm" type="string">
+            <column name="nomComm" length="30" not-null="true" />
+        </property>
+        <property name="prenomComm" type="string">
+            <column name="prenomComm" length="30" not-null="true" />
+        </property>
+        <property name="respEquipe" type="string">
+            <column name="respEquipe" length="30" not-null="true" />
+        </property>
+        <property name="numordre" type="string">
+            <column name="numordre" length="11" not-null="true" />
+        </property>
+        <property name="dateEdition" type="date">
+            <column name="dateEdition" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

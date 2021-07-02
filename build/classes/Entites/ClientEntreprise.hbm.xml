@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 mai 2020 00:26:42 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.ClientEntreprise" table="client_entreprise" catalog="crm" optimistic-lock="version">
+        <id name="raisonSociale" type="string">
+            <column name="raison_sociale" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="nom" type="string">
+            <column name="nom" length="50" not-null="true" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="prenom" length="50" not-null="true" />
+        </property>
+        <property name="fonction" type="string">
+            <column name="fonction" length="50" not-null="true" />
+        </property>
+        <property name="adresse" type="string">
+            <column name="adresse" length="100" not-null="true" />
+        </property>
+        <property name="numTelephone" type="string">
+            <column name="num_telephone" length="50" not-null="true" />
+        </property>
+        <property name="courrierElectr" type="string">
+            <column name="courrier_electr" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
